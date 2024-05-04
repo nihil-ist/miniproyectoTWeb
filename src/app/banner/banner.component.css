@@ -1,0 +1,12 @@
+.d {
+    /* background-image: url(../../assets/img/nyc.gif); */
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    text-align: center;
+    font-size: 7em;
+    -webkit-text-fill-color: white;
+    -webkit-text-stroke-width: 3px;
+    -webkit-text-stroke-color: black;
+    
+}
