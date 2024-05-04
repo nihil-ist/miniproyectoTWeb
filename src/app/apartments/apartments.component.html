@@ -1,0 +1,19 @@
+<div>
+    <app-search (spread)="spreadProccess($event)"></app-search>
+    @if (srch=="") {
+        @for (apartment of apartmentsService.apartments; track apartment) {
+            <p>
+                Name:{{apartment.name}},Owner:{{apartment.owner}},Address:{{apartment.address}},img:{{apartment.src}},Price(per day):{{apartment.price}}
+            </p>
+        }
+    }
+    @else {
+        @for (apartment of apartmentsService.apartments; track apartment) {
+            @if (srch == apartment.src) {
+                <p>
+                    Name:{{apartment.name}}, Owner:{{apartment.owner}},Address:{{apartment.address}},img:{{apartment.src}},Price(per day):{{apartment.price}}
+                </p>
+            }
+        }
+    }
+</div>
