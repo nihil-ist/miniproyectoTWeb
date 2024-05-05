@@ -1,16 +1,44 @@
-<mat-toolbar color="primary"> 
-    <img src="../../assets/img/logo.png" alt="" width="55">
-    &nbsp;&nbsp;
-    <span>The Apartment</span>  
-    &nbsp;&nbsp;&nbsp;
-    <a mat-button>Home</a>  
-    <a mat-button>About</a>  
-    <a mat-button>Contact</a>
-    <div class="spacer"></div>
 
-    <form class="d-flex">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">        
-        <button mat-stroked-button type="submit">Search</button>
-    </form>
+    <mat-toolbar  [style.height]="'40px'">
+        <div style="color: #F44336" id="carouselExampleSlidesOnly" class="carousel slide text-center w-100" data-bs-ride="carousel">
+            <div class="carousel-inner">
+            <div class="carousel-item active">
+                need an apartment quickly?
+            </div>
+            <div class="carousel-item">
+                make a reservation to see one of our temples
+            </div>
+            <div class="carousel-item">
+                this is an academic project
+            </div>
+            </div>
+        </div>
+    </mat-toolbar>
+<div style="background-color: #fff;" class="sticky-top shadow-lg">
+    <mat-toolbar color="primary" style="border-top-left-radius: 25px; border-top-right-radius: 25px; " class=""> 
+        <div class="pointer" [routerLink]="['/home']" routerLinkActive="router-link-active" >
+            <img src="../../assets/img/logo.png" alt="" width="50">
+            &nbsp;
+            <span>the apartment</span>  
+        </div>
+        
+        <div class="spacer"></div>
 
-</mat-toolbar>
+        
+        <a mat-button [routerLink]="['/home']" routerLinkActive="router-link-active" >home</a>  
+        <a mat-button>apartments</a>  
+        <a mat-button>about</a>
+        <!-- <div class="spacer"></div> -->
+        &nbsp;&nbsp;&nbsp;&nbsp;
+
+
+        <form class="d-flex">
+            <input class="form-control me-2" type="search" placeholder="" aria-label="Search">        
+            <button mat-stroked-button type="submit">search</button>
+        </form>
+
+    </mat-toolbar>
+</div>
+
+
+

@@ -10,3 +10,14 @@
     position: relative;
     top: 10px;
  }
+
+ .pointer:hover {
+   cursor: pointer;
+ }
+
+ /* .stickyNav {
+   position: sticky;
+   display: block;
+   top: 0;
+   z-index: 10000;
+ } */

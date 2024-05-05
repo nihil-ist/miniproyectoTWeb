@@ -1,4 +1,5 @@
-<mat-grid-list cols="4" rowHeight="100px">
+<div>
+  <mat-grid-list cols="4" rowHeight="100px" style="padding: 100px;">
     @for (tile of tiles; track tile) {
       <mat-grid-tile class="d"
         [colspan]="tile.cols"
@@ -7,8 +8,10 @@
         [style.background-repeat]="'no-repeat'"
         [style.background-size]="'cover'"
         >{{tile.text}}
-        
     </mat-grid-tile>
     }
-  </mat-grid-list>
+</mat-grid-list>
+</div>
+
+
   
