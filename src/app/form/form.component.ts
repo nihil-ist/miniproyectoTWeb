@@ -22,10 +22,14 @@ export class FormComponent {
     email: '',
     price: 0,
     address: '',
-    days: 0
+    days: 0,
+    nights: 0
   };
 
   reservations: Reservation[] = [];
+
+  pastReservations: Reservation[] = [];
+  futureReservations: Reservation[] = [];
 
   // arrivalDate:string | null = null;
   // departureDate:string | null = null;
@@ -36,9 +40,28 @@ export class FormComponent {
     const storedReservations = localStorage.getItem('reservations');
     if (storedReservations) {
       this.reservations = JSON.parse(storedReservations);
+      this.splitReservations();
     }
     // this.arrivalDate = localStorage.getItem('selectedDate');
     // this.departureDate = localStorage.getItem('departureDate');
+  }
+
+  calculateNights(arrivalDate: Date, departureDate: Date): number {
+    const oneDay = 24 * 60 * 60 * 1000; // hours*minutes*seconds*milliseconds
+    const arrival = new Date(arrivalDate);
+    const departure = new Date(departureDate);
+    const nights = Math.round(Math.abs((arrival.getTime() - departure.getTime()) / oneDay));
+    return nights;
+  }
+
+  splitReservations() {
+    const currentDate = new Date();
+    this.pastReservations = this.reservations.filter(reservation =>
+      reservation.arrivalDate && new Date(reservation.arrivalDate) < currentDate
+    );
+    this.futureReservations = this.reservations.filter(reservation =>
+      reservation.arrivalDate && new Date(reservation.arrivalDate) >= currentDate
+    );
   }
 
   submitForm(){
@@ -72,6 +95,9 @@ export class FormComponent {
       event.target.value = '';
     } else {
       this.reservation.departureDate = departureDate;
+      if (arrivalDate) {
+        this.reservation.nights = this.calculateNights(arrivalDate, departureDate);
+      }
     }
   }
 
@@ -101,4 +127,5 @@ interface Reservation {
   price: number;
   address: string;
   days: number;
+  nights: number;
 }

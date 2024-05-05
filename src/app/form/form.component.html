@@ -42,32 +42,63 @@
     <button type="submit" class="btn btn-primary" (click)="submitForm()">Submit</button>
 </form>
 
+<h2>Past Reservations</h2>
 <table class="table">
-    <thead>
-      <tr>
-        <th>Arrival Date</th>
-        <th>Departure Date</th>
-        <th>Arrival Time</th>
-        <th>Name</th>
-        <th>Phone</th>
-        <th>Email</th>
-        <th>Price</th>
-        <th>Address</th>
-        <th>Total Days</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let reservation of reservations">
-        <td>{{ reservation.arrivalDate | date }}</td>
-        <td>{{ reservation.departureDate | date }}</td>
-        <td>{{ reservation.arrivalTime }}</td>
-        <td>{{ reservation.name }}</td>
-        <td>{{ reservation.phone }}</td>
-        <td>{{ reservation.email }}</td>
-        <td>{{ reservation.price }}</td>
-        <td>{{ reservation.address }}</td>
-        <td>{{ reservation.days }}</td>
-      </tr>
-    </tbody>
+  <thead>
+    <tr>
+      <th>Arrival Date</th>
+      <th>Departure Date</th>
+      <th>Arrival Time</th>
+      <th>Name</th>
+      <th>Phone</th>
+      <th>Email</th>
+      <th>Price</th>
+      <th>Address</th>
+      <th>Total Nights</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let reservation of pastReservations">
+      <td>{{ reservation.arrivalDate | date }}</td>
+      <td>{{ reservation.departureDate | date }}</td>
+      <td>{{ reservation.arrivalTime }}</td>
+      <td>{{ reservation.name }}</td>
+      <td>{{ reservation.phone }}</td>
+      <td>{{ reservation.email }}</td>
+      <td>{{ reservation.price }}</td>
+      <td>{{ reservation.address }}</td>
+      <td>{{ reservation.nights }}</td>
+    </tr>
+  </tbody>
 </table>
-  
+
+<!-- Future Reservations Table -->
+<h2>Future Reservations</h2>
+<table class="table">
+  <thead>
+    <tr>
+      <th>Arrival Date</th>
+      <th>Departure Date</th>
+      <th>Arrival Time</th>
+      <th>Name</th>
+      <th>Phone</th>
+      <th>Email</th>
+      <th>Price</th>
+      <th>Address</th>
+      <th>Total Nighths</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let reservation of futureReservations">
+      <td>{{ reservation.arrivalDate | date }}</td>
+      <td>{{ reservation.departureDate | date }}</td>
+      <td>{{ reservation.arrivalTime }}</td>
+      <td>{{ reservation.name }}</td>
+      <td>{{ reservation.phone }}</td>
+      <td>{{ reservation.email }}</td>
+      <td>{{ reservation.price }}</td>
+      <td>{{ reservation.address }}</td>
+      <td>{{ reservation.nights }}</td>
+    </tr>
+  </tbody>
+</table>
