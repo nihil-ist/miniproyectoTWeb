@@ -1,14 +1,18 @@
 <form (ngSubmit)="submitForm()" #form="ngForm">
     <div class="form-group">
-        <label for="date">Arrival Date & Time</label>
-        <input type="datetime-local" class="form-control" id="date" name="date" ngModel required>
-    </div>
+        <label for="arrivalDate">Arrival Date</label>
+        <input type="date" class="form-control" id="arrivalDate" name="arrivalDate" (change)="saveDate($event)" required>
+      </div>
+      <div class="form-group">
+        <label for="departureDate">Departure Date</label>
+        <input type="date" class="form-control" id="departureDate" name="departureDate" (change)="saveDepartureDate($event)" required>
+      </div>
     <div class="form-group">
         <label for="name">Full Name</label>
         <input type="text" class="form-control" id="name" name="name" ngModel required>
     </div>
     <div class="form-group">
-        <label for="phone">Phone Number</label>
+        <label for="phone">Phone Number</label>n
         <input type="tel" class="form-control" id="phone" name="phone" ngModel required>
     </div>
     <div class="form-group">
@@ -31,5 +35,5 @@
         <label for="days">Total Days of Stay</label>
         <input type="number" class="form-control" id="days" name="days" ngModel required>
     </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
+    <button type="submit" class="btn btn-primary" (click)="submitForm()">Submit</button>
 </form>
