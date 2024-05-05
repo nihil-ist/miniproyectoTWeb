@@ -1,21 +1,21 @@
 
-    <mat-toolbar  [style.height]="'40px'">
-        <div style="color: #F44336" id="carouselExampleSlidesOnly" class="carousel slide text-center w-100" data-bs-ride="carousel">
-            <div class="carousel-inner">
-            <div class="carousel-item active">
-                need an apartment quickly?
-            </div>
-            <div class="carousel-item">
-                make a reservation to see one of our temples
-            </div>
-            <div class="carousel-item">
-                this is an academic project
-            </div>
-            </div>
+<mat-toolbar [style.background]="'white'" [style.height]="'40px'">
+    <div style="color: #F44336;" id="carouselExampleSlidesOnly" class="carousel slide text-center w-100" data-bs-ride="carousel">
+        <div class="carousel-inner">
+        <div class="carousel-item active">
+            need an apartment quickly?
         </div>
-    </mat-toolbar>
-<div style="background-color: #fff;" class="sticky-top shadow-lg">
-    <mat-toolbar color="primary" style="border-top-left-radius: 25px; border-top-right-radius: 25px; " class=""> 
+        <div class="carousel-item">
+            make a reservation to see one of our temples
+        </div>
+        <div class="carousel-item">
+            this is an academic project
+        </div>
+        </div>
+    </div>
+</mat-toolbar>
+<div class="sticky-top" style="background-color: white;">
+    <mat-toolbar color="primary" style="border-top-left-radius: 25px; border-top-right-radius: 25px; " class="shadow-lg"> 
         <div class="pointer" [routerLink]="['/home']" routerLinkActive="router-link-active" >
             <img src="../../assets/img/logo.png" alt="" width="50">
             &nbsp;
@@ -27,8 +27,7 @@
         
         <a mat-button [routerLink]="['/home']" routerLinkActive="router-link-active" >home</a>  
         <a mat-button>apartments</a>  
-        <a mat-button>about</a>
-        <!-- <div class="spacer"></div> -->
+        <a mat-button [routerLink]="['/about']" routerLinkActive="router-link-active" >about</a>
         &nbsp;&nbsp;&nbsp;&nbsp;
 
 

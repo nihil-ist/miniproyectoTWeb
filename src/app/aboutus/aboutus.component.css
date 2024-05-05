@@ -1,17 +1,3 @@
-.intro{
-    background-image: url('../assets/img/aboutus/copenhagen-edit.png');
-    padding: 90px;
-}
-
-#title1{
-    text-align: center;
-    font-size: 10vw;
-    color: white;
-    /*background-image: url('../assets/img/aboutus/sea.jpeg');
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent; */
-}
 
 .whorus{
     padding-block-start: 80px;
@@ -19,16 +5,7 @@
     padding-inline: 350px;
 }
 
-#title2{
-    padding-block-end: 20px;
-
-    font-weight: bold;
-    font-size: 20px;
-    
-}
-
 .cont-myv {
-    padding-inline: 300px;
 
     display: grid;
     grid-template-columns: 1fr 1fr; 
@@ -36,22 +13,10 @@
 }
 
 .elemento1-grid {
-    background-color: lightgray;
-    padding: 20px;
-    padding-block-end: 20px;
-    border-radius: 10px;
-}
-
-.titlemyv{
+    background-color: rgba(0, 0, 0, 0.03);
     text-align: center;
-    font-weight: bold;
-    font-size: 20px;
-}
-
-.stats{
-    padding-block-start: 80px;
-    padding-block-end: 100px;
-    padding-inline: 350px;
+    padding: 10%;
+    border-radius: 10px;
 }
 
 .contenedor {
@@ -60,23 +25,18 @@
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr; 
     gap: 10px;
-    height: 400px;
 }
 
 .elemento2-grid {
-    background-color: #e8e4e2;
+    background-color: rgba(0, 0, 0, 0.03);;
     border-radius: 10px;
-    padding: 20px;
+    padding: 10%;
     text-align: center;
 }
 
 .number-stats{
     display: block;
     font-size: 40px;
-    margin-block-start: 1em;
-    margin-block-end: 10px;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
     font-weight: bold;
     unicode-bidi: isolate;
 }
@@ -85,11 +45,6 @@
     padding-block-start: 7px;
     font-size: 12px;
     color: grey;
-}
-
-.founders{
-    padding-block-start: 150px;
-    padding-inline: 180px;
 }
 
 .grid-container {
@@ -105,7 +60,7 @@
 }
 
 .img-f{
-    width: 200px; 
+    width: 100%; 
     height: auto;
     border-radius: 10px;
 }
@@ -113,6 +68,4 @@
 .text-f{
     padding-block-start: 20px;
     text-align: center;
-    font-size: 18px;
-    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
 }
