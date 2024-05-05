@@ -41,3 +41,33 @@
     </div>
     <button type="submit" class="btn btn-primary" (click)="submitForm()">Submit</button>
 </form>
+
+<table class="table">
+    <thead>
+      <tr>
+        <th>Arrival Date</th>
+        <th>Departure Date</th>
+        <th>Arrival Time</th>
+        <th>Name</th>
+        <th>Phone</th>
+        <th>Email</th>
+        <th>Price</th>
+        <th>Address</th>
+        <th>Total Days</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let reservation of reservations">
+        <td>{{ reservation.arrivalDate | date }}</td>
+        <td>{{ reservation.departureDate | date }}</td>
+        <td>{{ reservation.arrivalTime }}</td>
+        <td>{{ reservation.name }}</td>
+        <td>{{ reservation.phone }}</td>
+        <td>{{ reservation.email }}</td>
+        <td>{{ reservation.price }}</td>
+        <td>{{ reservation.address }}</td>
+        <td>{{ reservation.days }}</td>
+      </tr>
+    </tbody>
+</table>
+  
