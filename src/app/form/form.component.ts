@@ -15,7 +15,14 @@ export class FormComponent {
 
   reservation: Reservation = {
     arrivalDate: null,
-    departureDate: null
+    departureDate: null,
+    arrivalTime: '',
+    name: '',
+    phone: '',
+    email: '',
+    price: 0,
+    address: '',
+    days: 0
   };
 
   reservations: Reservation[] = [];
@@ -87,4 +94,11 @@ export class FormComponent {
 interface Reservation {
   arrivalDate: Date | null;
   departureDate: Date | null;
+  arrivalTime: string;
+  name: string;
+  phone: string;
+  email: string;
+  price: number;
+  address: string;
+  days: number;
 }
