@@ -8,4 +8,8 @@ import { Apartment } from '../interfaces/apartment';
 export class ApartmentsService {
   public apartments:Apartment[]=APARTMENTS;
   constructor() { }
+  searchApartment(id:number):number{
+    let index = this.apartments.findIndex(p=>p.id ===id);
+    return index;
+  }
 }
