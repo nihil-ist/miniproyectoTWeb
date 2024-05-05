@@ -6,11 +6,13 @@ import { BannerComponent } from './banner/banner.component';
 import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
 import { VideopipeComponent } from './videopipe/videopipe.component';
+import { ApartmentsComponent } from './apartments/apartments.component';
+import { SearchComponent } from './search/search.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, NavbarComponent, BannerComponent, FooterComponent, HomeComponent, VideopipeComponent],
+  imports: [RouterOutlet, NavbarComponent, BannerComponent, FooterComponent, HomeComponent, VideopipeComponent, ApartmentsComponent, SearchComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 
