@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import {MatGridListModule} from '@angular/material/grid-list'; 
+import {MatCardModule} from '@angular/material/card'; 
 
 export interface Tile {
   color: string;
@@ -11,7 +12,7 @@ export interface Tile {
 @Component({
   selector: 'app-banner',
   standalone: true,
-  imports: [MatGridListModule],
+  imports: [MatGridListModule, MatCardModule],
   templateUrl: './banner.component.html',
   styleUrl: './banner.component.css'
 })

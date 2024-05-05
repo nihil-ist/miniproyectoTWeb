@@ -11,3 +11,30 @@
     padding: 100px;
     
 }
+
+.banner {
+    /* Set the background image */
+    background-image: url('../../assets/img/nyc.gif');
+    background-size: cover; /* Cover the entire card area */
+    background-position: center; /* Center the image */
+    display: flex; /* Enable flexbox for positioning */
+    flex-direction: column; /* Align items vertically */
+    align-items: center; /* Center items horizontally */
+    justify-content: center; /* Center items vertically within the card */
+    text-align: center; /* Center text within the card */
+    color: white; /* Adjust text color for contrast */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    padding: 20vw 5%; /* Add some padding around the content */
+  }
+  
+  .banner mat-card-header {
+    /* Style the header to match the banner background */
+    background-color: transparent;
+    padding: 0; /* Remove default padding */
+  }
+  
+  .banner mat-card-title {
+    /* Style the title to stand out */
+    font-size: 4rem;
+    font-weight: bold;
+  }

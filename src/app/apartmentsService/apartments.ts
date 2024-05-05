@@ -6,7 +6,7 @@ export const APARTMENTS: Apartment[] = [
         name: "Peaceful Greenpoint",
         description: "A comfortable apartment in a convenient location.",
         city: "New York, United States",
-        owner: "John Doe",
+        owner: "Diane Keaton",
         address: "123 Main Street",
         src: "../assets/img/apartments/1",
         price: "$80"
@@ -16,7 +16,7 @@ export const APARTMENTS: Apartment[] = [
         name: "Private Bedroom in Brooklyn",
         description: "A stylish studio apartment with all amenities included.",
         city: "New York, United States",
-        owner: "Jane Smith",
+        owner: "Elaine May",
         address: "456 Elm Street",
         src: "../assets/img/apartments/2",
         price: "$68"
@@ -26,7 +26,7 @@ export const APARTMENTS: Apartment[] = [
         name: "Cozy room (shared flat) in the heart of Zurich",
         description: "A cozy loft space with exposed brick walls.",
         city: "Zurich, Switzerland",
-        owner: "Michael Johnson",
+        owner: "Jean-Luc Godard",
         address: "789 Oak Street",
         src: "../assets/img/apartments/3",
         price: "$102"
@@ -36,7 +36,7 @@ export const APARTMENTS: Apartment[] = [
         name: "Right in the middle of Geneva.",
         description: "A large condo with panoramic views of the city skyline.",
         city: "Geneva, Switzerland",
-        owner: "Emily Davis",
+        owner: "Bruno Ganz",
         address: "321 Pine Street",
         src: "../assets/img/apartments/4",
         price: "$110"
@@ -46,7 +46,7 @@ export const APARTMENTS: Apartment[] = [
         name: "Apartment near the Eiffel Tower",
         description: "An exquisite penthouse offering luxury living at its finest.",
         city: "Paris, France",
-        owner: "Chris Wilson",
+        owner: "Julie Delpy",
         address: "654 Maple Street",
         src: "../assets/img/apartments/5",
         price: "$79"
@@ -56,7 +56,7 @@ export const APARTMENTS: Apartment[] = [
         name: "Room three blocks from the WTC in Napoles",
         description: "A bright and sunny apartment perfect for relaxation.",
         city: "Mexico City, Mexico",
-        owner: "Sarah Brown",
+        owner: "Emilio Fernandez",
         address: "987 Cedar Street",
         src: "../assets/img/apartments/6",
         price: "$52"
@@ -66,7 +66,7 @@ export const APARTMENTS: Apartment[] = [
         name: "Private Room in West Seattle",
         description: "An urban oasis nestled in the heart of the city.",
         city: "Washington, United States",
-        owner: "David Martinez",
+        owner: "Billy Wilder",
         address: "135 Walnut Street",
         src: "../assets/img/apartments/7",
         price: "$80"
@@ -76,7 +76,7 @@ export const APARTMENTS: Apartment[] = [
         name: "Designer apartment near Tokyo",
         description: "An elegant townhouse with classic architectural features.",
         city: "Arakawa City, Japan",
-        owner: "Jessica Taylor",
+        owner: "Yasujiro Ozu",
         address: "246 Birch Street",
         src: "../assets/img/apartments/8",
         price: "$75"
@@ -86,7 +86,7 @@ export const APARTMENTS: Apartment[] = [
         name: "Room in Seoul",
         description: "A charming cottage with a beautiful garden.",
         city: "Seoul, South Korea",
-        owner: "Daniel Anderson",
+        owner: "Park Chan-wook",
         address: "579 Spruce Street",
         src: "../assets/img/apartments/9",
         price: "$90"
@@ -96,7 +96,7 @@ export const APARTMENTS: Apartment[] = [
         name: "Workshop loft in the Belgian Quarter",
         description: "A stylish loft apartment in the heart of downtown.",
         city: "Cologne, Germany",
-        owner: "Amanda Lee",
+        owner: "Wim Wenders",
         address: "864 Cherry Street",
         src: "../assets/img/apartments/10",
         price: "$84"
@@ -106,7 +106,7 @@ export const APARTMENTS: Apartment[] = [
         name: "Penthouse in Ibiza",
         description: "An apartment with stunning city views.",
         city: "Ibiza, Spain",
-        owner: "Amanda Lee",
+        owner: "Pedro Almodovar",
         address: "864 Cherry Street",
         src: "../assets/img/apartments/11",
         price: "$125"
@@ -116,7 +116,7 @@ export const APARTMENTS: Apartment[] = [
         name: "Apartment in the heart of Venice",
         description: "A riverside retreat perfect for nature lovers.",
         city: "Venice, Italy",
-        owner: "Amanda Lee",
+        owner: "Vittorio de Sica",
         address: "864 Cherry Street",
         src: "../assets/img/apartments/12",
         price: "$140"

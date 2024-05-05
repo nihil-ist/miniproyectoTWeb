@@ -3,6 +3,8 @@
 <div class="paddingx mb-5">
   <h1 class="mt-5 fw-bold">browse our apartments</h1>
     <app-search (spread)="spreadProccess($event)"></app-search>
+
+    <!-- <hr class="my-5 pb-5"> -->
     @if (srch=="") {
       <div class="row row-cols-1 row-cols-md-3 g-4  " style="margin: 0 auto;">
         @for (apartment of apartmentsService.apartments; track apartment;let i=$index;) {
@@ -60,7 +62,7 @@
         @for (apartment of apartmentsService.apartments; track apartment;let i = $index;) {
             @if (searchMatches(srch,apartment.owner) || searchMatches(srch,apartment.city)) {
               <div class="col col-sm-12 col-md-6 col-xl-5 col-xxl-4 mb-4"  style="margin: 0 auto;">
-  
+                
                 <div class="card" style="width: 19rem; margin: 0 auto; border: none; background: none;">
                   <div id="carouselApartments{{i}}" class="carousel slide" data-bs-ride="true">
                     <div class="carousel-indicators">
