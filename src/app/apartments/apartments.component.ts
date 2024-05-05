@@ -15,4 +15,13 @@ export class ApartmentsComponent {
     this.srch=search;
   }
   constructor(public apartmentsService:ApartmentsService){}
+
+  searchMatches(search:string,word:string):boolean{
+    search = search.toLowerCase();
+    word = word.toLowerCase();
+    console.log(search+","+word);
+    if(word.includes(search) || search === word)
+      return true;
+    return false;
+  }
 }

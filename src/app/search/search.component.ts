@@ -12,6 +12,7 @@ export class SearchComponent {
   search:string="";
   @Output() spread = new EventEmitter<string>();
   onSpread(){
+    this.search = this.search.trim();
     this.spread.emit(this.search);
   }
 }

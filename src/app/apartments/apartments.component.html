@@ -31,8 +31,7 @@
                     <p class="card-text">
                         Name:{{apartment.name}}
                         Owner:{{apartment.owner}}
-                        Address:{{apartment.address}}
-                        img:{{apartment.src}} <br>
+                        City: {{apartment.city}}
                         Price(per day):{{apartment.price}}
                     </p>
                   </div>
@@ -41,7 +40,7 @@
     }
     @else {
         @for (apartment of apartmentsService.apartments; track apartment;let i = $index;) {
-            @if (srch == apartment.src) {
+            @if (searchMatches(srch,apartment.owner) || searchMatches(srch,apartment.city)) {
                 <div class="card" style="width: 18rem;">
                     <div id="carouselExampleRide{{i}}" class="carousel slide" data-bs-ride="true">
                         <div class="carousel-inner">
@@ -71,12 +70,14 @@
                         <p class="card-text">
                             Name:{{apartment.name}}
                             Owner:{{apartment.owner}}
-                            Address:{{apartment.address}}
-                            img:{{apartment.src}} <br>
+                            City: {{apartment.city}}
                             Price(per day):{{apartment.price}}
                         </p>
                       </div>
                 </div>
+            }
+            @else {
+              There are no coincidences yet
             }
         }
     }
