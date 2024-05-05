@@ -1,11 +1,13 @@
 import { Component } from '@angular/core';
 import { SearchComponent } from '../search/search.component';
 import { ApartmentsService } from '../apartmentsService/apartments.service';
+import { NavbarComponent } from '../navbar/navbar.component';
+import { FooterComponent } from '../footer/footer.component';
 
 @Component({
   selector: 'app-apartments',
   standalone: true,
-  imports: [SearchComponent],
+  imports: [SearchComponent, NavbarComponent, FooterComponent],
   templateUrl: './apartments.component.html',
   styleUrl: './apartments.component.css'
 })

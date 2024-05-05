@@ -1,16 +1,16 @@
 
 <mat-toolbar [style.background]="'white'" [style.height]="'40px'">
-    <div style="color: #F44336;" id="carouselExampleSlidesOnly" class="carousel slide text-center w-100" data-bs-ride="carousel">
+    <div style="color: #F44336;" id="carouselTitle" class="carousel slide text-center w-100" data-bs-ride="carousel">
         <div class="carousel-inner">
-        <div class="carousel-item active">
-            need an apartment quickly?
-        </div>
-        <div class="carousel-item">
-            make a reservation to see one of our temples
-        </div>
-        <div class="carousel-item">
-            this is an academic project
-        </div>
+            <div class="carousel-item active">
+                need an apartment quickly?
+            </div>
+            <div class="carousel-item">
+                make a reservation to see one of our temples
+            </div>
+            <div class="carousel-item">
+                this is an academic project
+            </div>
         </div>
     </div>
 </mat-toolbar>
@@ -26,15 +26,13 @@
 
         
         <a mat-button [routerLink]="['/home']" routerLinkActive="router-link-active" >home</a>  
-        <a mat-button>apartments</a>  
+        <a mat-button [routerLink]="['/apartments']" routerLinkActive="router-link-active" >apartments</a>  
         <a mat-button [routerLink]="['/about']" routerLinkActive="router-link-active" >about</a>
         &nbsp;&nbsp;&nbsp;&nbsp;
 
 
-        <form class="d-flex">
-            <input class="form-control me-2" type="search" placeholder="" aria-label="Search">        
-            <button mat-stroked-button type="submit">search</button>
-        </form>
+        <!-- <app-search (spread)="spreadProccess($event)"></app-search> -->
+
 
     </mat-toolbar>
 </div>
