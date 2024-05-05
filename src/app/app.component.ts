@@ -5,13 +5,15 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import { BannerComponent } from './banner/banner.component';
 import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
+import { VideopipeComponent } from './videopipe/videopipe.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, NavbarComponent, BannerComponent, FooterComponent, HomeComponent],
+  imports: [RouterOutlet, NavbarComponent, BannerComponent, FooterComponent, HomeComponent, VideopipeComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
+
 })
 export class AppComponent {
   title = 'miniproyectoTWeb';
