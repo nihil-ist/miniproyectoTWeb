@@ -1,33 +1,100 @@
 <div class="container">
-    <table class="table table-striped">
-      <thead>
-        <tr>
-          <th>Apartment</th>
-          <th>Info</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel eius a quam tenetur sapiente illo vero doloremque ipsa, et similique quod. Asperiores, totam? Non, repudiandae? Voluptate cumque quam expedita perferendis?</td>
-          <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime autem deserunt ipsam et recusandae saepe alias possimus. Voluptatem vel, nobis accusamus magnam iste rerum illum facere accusantium nulla nesciunt dolores!</td>
-        </tr>
-        <tr>
-          <td>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, magnam autem illum deleniti, deserunt tempora, laudantium dolor voluptas ab sapiente nostrum amet odit perferendis excepturi laboriosam facere quisquam quibusdam sequi.</td>
-          <td>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolor accusamus itaque quos voluptas velit eligendi odit quod soluta? Mollitia optio consequuntur porro ab reprehenderit. Facilis nemo tenetur explicabo vero fuga!</td>
-        </tr>
-        <tr>
-          <td>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quis, repellendus esse illo fugit nisi voluptates distinctio provident illum debitis qui maiores impedit aut ab ipsa cumque cupiditate. Rerum, sequi voluptatem!</td>
-          <td>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam necessitatibus eligendi modi ducimus, soluta ipsum nobis eos sunt sequi, saepe quisquam ut doloremque at! Quae odit laboriosam harum ducimus qui?</td>
-        </tr>
-        <tr>
-          <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit eveniet iusto reprehenderit reiciendis earum in voluptatibus nesciunt porro, quaerat aut illum! Distinctio natus ex rem quod officia earum beatae doloremque!</td>
-          <td>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque velit perferendis ducimus, at, enim odio tempora omnis sit nam mollitia nihil quibusdam suscipit sapiente voluptatum aperiam vitae repudiandae animi totam!</td>
-        </tr>
-        <tr>
-          <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis sapiente nulla, aspernatur aut quo impedit consequatur tempore error alias modi dolorem! Dolorum tempora eum unde accusamus laborum doloremque facere sunt.</td>
-          <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit quasi non ducimus illo fugit excepturi. Quo, dolorum delectus ullam, ad maiores nostrum facere enim nulla aperiam debitis molestiae? Ut, facilis.</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-  
+  <style>
+    .table-borderless {
+      border: none;
+    }
+    .table-borderless td {
+      padding: 0.5rem;
+      vertical-align: middle;
+    }
+    .logo-cell {
+      vertical-align: middle !important;
+    }
+    .description-row {
+      line-height: 0.7; 
+    }
+    .text-sm {
+      font-size: 0.875rem; 
+    }
+  </style>
+  <table class="table table-borderless">
+    <!-- <thead>
+      <tr>
+        <th>Característica</th>
+        <th>Descripción</th>
+      </tr>
+    </thead> -->
+    <tbody>
+      <tr>
+        <td class="border-0 text-center logo-cell" style="text-align: center;" rowspan="2"><i class="fas fa-wifi"></i></td>
+        <td class="border-0 description-row">Este apartamento cuenta con WiFi gratuito para los huéspedes.</td>
+      </tr>
+      <tr>
+        <td class="border-0 description-row text-muted text-sm">Navegue por la web o trabaje desde su apartamento con nuestra conexión WiFi de alta velocidad.</td>
+      </tr>
+      <tr>
+        <td class="border-0 text-center logo-cell" style="text-align: center;" rowspan="2"><i class="fas fa-swimming-pool"></i></td>
+        <td class="border-0 description-row">Disfrute de una piscina comunitaria disponible para todos los huéspedes.</td>
+      </tr>
+      <tr>
+        <td class="border-0 description-row text-muted text-sm">Refresque su día bajo el sol mediterráneo en nuestra amplia piscina al aire libre.</td>
+      </tr>
+      <tr>
+        <td class="border-0 text-center logo-cell" style="text-align: center;" rowspan="2"><i class="fas fa-tv"></i></td>
+        <td class="border-0 description-row">Relájese y vea sus programas favoritos en la televisión de pantalla plana.</td>
+      </tr>
+      <tr>
+        <td class="border-0 description-row text-muted text-sm">Ofrecemos una amplia selección de canales para que disfrute de su entretenimiento preferido.</td>
+      </tr>
+      <tr>
+        <td class="border-0 text-center logo-cell" style="text-align: center;" rowspan="2"><i class="fas fa-parking"></i></td>
+        <td class="border-0 description-row">El apartamento cuenta con estacionamiento privado para su comodidad.</td>
+      </tr>
+      <tr>
+        <td class="border-0 description-row text-muted text-sm">No se preocupe por el estacionamiento, tenemos plazas reservadas para nuestros huéspedes.</td>
+      </tr>
+      <tr>
+        <td class="border-0 text-center logo-cell" style="text-align: center;" rowspan="2"><i class="fas fa-paw"></i></td>
+        <td class="border-0 description-row">Aceptamos mascotas en este alojamiento. Consulte nuestras políticas.</td>
+      </tr>
+      <tr>
+        <td class="border-0 description-row text-muted text-sm">Traiga a su amigo peludo para que disfrute de unas vacaciones con toda la familia.</td>
+      </tr>
+      <tr>
+        <td class="border-0 text-center logo-cell" style="text-align: center;" rowspan="2"><i class="fas fa-utensils"></i></td>
+        <td class="border-0 description-row">La cocina está equipada con utensilios de cocina básicos para su conveniencia.</td>
+      </tr>
+      <tr>
+        <td class="border-0 description-row text-muted text-sm">Prepare deliciosas comidas y disfrute de la libertad de cocinar durante su estancia.</td>
+      </tr>
+      <tr>
+        <td class="border-0 text-center logo-cell" style="text-align: center;" rowspan="2"><i class="fas fa-bath"></i></td>
+        <td class="border-0 description-row">El baño incluye artículos de aseo gratuitos para los huéspedes.</td>
+      </tr>
+      <tr>
+        <td class="border-0 description-row text-muted text-sm">¡Deje sus preocupaciones atrás y disfrute de una experiencia relajante!</td>
+      </tr>
+      <tr>
+        <td class="border-0 text-center logo-cell" style="text-align: center;" rowspan="2"><i class="fas fa-bed"></i></td>
+        <td class="border-0 description-row">Las cómodas camas están listas para brindarle una buena noche de sueño.</td>
+      </tr>
+      <tr>
+        <td class="border-0 description-row text-muted text-sm">Nuestras cómodas camas están diseñadas para proporcionarle una excelente noche de sueño.</td>
+      </tr>
+      <tr>
+        <td class="border-0 text-center logo-cell" style="text-align: center;" rowspan="2"><i class="fas fa-coffee"></i></td>
+        <td class="border-0 description-row">Disfrute de una taza de café recién preparado todas las mañanas.</td>
+      </tr>
+      <tr>
+        <td class="border-0 description-row text-muted text-sm">Comience su día con energía disfrutando de una taza de café recién preparado todas las mañanas.</td>
+      </tr>
+      <tr>
+        <td class="border-0 text-center logo-cell" style="text-align: center;" rowspan="2"><i class="fas fa-umbrella-beach"></i></td>
+        <td class="border-0 description-row">Acceso directo a la playa para disfrutar del sol y la arena.</td>
+      </tr>
+      <tr>
+        <td class="border-0 description-row text-muted text-sm">Con acceso directo a la playa, podrá disfrutar del sol y la arena en cualquier momento.</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
