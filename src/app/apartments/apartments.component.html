@@ -21,19 +21,19 @@
                 
                   <div class="carousel-inner">
                     <div class="carousel-item active">
-                      <img [src]="apartment.src + '/1.jpg'" class="d-block w-100" alt="..." style="border-radius: 5%;">
+                      <img [src]="apartment.src + '/1.jpg'" [ngStyle]="imgCarousel" alt="...">
                     </div>
                     <div class="carousel-item">
-                      <img [src]="apartment.src + '/2.jpg'" class="d-block w-100" alt="..." style="border-radius: 5%;">
+                      <img [src]="apartment.src + '/2.jpg'" [ngStyle]="imgCarousel" alt="...">
                     </div>
                     <div class="carousel-item">
-                      <img [src]="apartment.src + '/3.jpg'" class="d-block w-100" alt="..." style="border-radius: 5%;">
+                      <img [src]="apartment.src + '/3.jpg'" [ngStyle]="imgCarousel" alt="...">
                     </div>
                     <div class="carousel-item">
-                      <img [src]="apartment.src + '/4.jpg'" class="d-block w-100" alt="..." style="border-radius: 5%;">
+                      <img [src]="apartment.src + '/4.jpg'" [ngStyle]="imgCarousel" alt="...">
                     </div>
                     <div class="carousel-item">
-                      <img [src]="apartment.src + '/5.jpg'" class="d-block w-100" alt="..." style="border-radius: 5%;">
+                      <img [src]="apartment.src + '/5.jpg'" [ngStyle]="imgCarousel" alt="...">
                     </div>
                   </div>
                   <button class="carousel-control-prev" type="button" [attr.data-bs-target]="'#carouselApartments' + i" data-bs-slide="prev">
@@ -58,9 +58,11 @@
     }
     @else {
       <div class="row row-cols-1 row-cols-md-3 g-4  " style="margin: 0 auto;">
-
-        @for (apartment of apartmentsService.apartments; track apartment;let i = $index;) {
+        @if (searchExists(srch, apartmentsService.apartments)) {
+          @for (apartment of apartmentsService.apartments; track apartment;let i = $index;) {
             @if (searchMatches(srch,apartment.owner) || searchMatches(srch,apartment.city)) {
+              <!-- noMatchesFound = false; -->
+              
               <div class="col col-sm-12 col-md-6 col-xl-5 col-xxl-4 mb-4"  style="margin: 0 auto;">
                 
                 <div class="card" style="width: 19rem; margin: 0 auto; border: none; background: none;">
@@ -74,19 +76,19 @@
                     </div>    
                     <div class="carousel-inner">
                           <div class="carousel-item active">
-                            <img [src]="apartment.src + '/1.jpg'" class="d-block w-100" alt="..." style="border-radius: 5%;">
+                            <img [src]="apartment.src + '/1.jpg'" [ngStyle]="imgCarousel" alt="...">
                           </div>
                           <div class="carousel-item">
-                            <img [src]="apartment.src + '/2.jpg'" class="d-block w-100" alt="..." style="border-radius: 5%;">
+                            <img [src]="apartment.src + '/2.jpg'" [ngStyle]="imgCarousel" alt="...">
                           </div>
                           <div class="carousel-item">
-                            <img [src]="apartment.src + '/3.jpg'" class="d-block w-100" alt="..." style="border-radius: 5%;">
+                            <img [src]="apartment.src + '/3.jpg'" [ngStyle]="imgCarousel" alt="...">
                           </div>
                           <div class="carousel-item">
-                            <img [src]="apartment.src + '/4.jpg'" class="d-block w-100" alt="..." style="border-radius: 5%;">
+                            <img [src]="apartment.src + '/4.jpg'" [ngStyle]="imgCarousel" alt="...">
                           </div>
                           <div class="carousel-item">
-                            <img [src]="apartment.src + '/5.jpg'" class="d-block w-100" alt="..." style="border-radius: 5%;">
+                            <img [src]="apartment.src + '/5.jpg'" [ngStyle]="imgCarousel" alt="...">
                           </div>
                         </div>
                         <button class="carousel-control-prev" type="button" [attr.data-bs-target]="'#carouselApartments' + i" data-bs-slide="prev">
@@ -107,12 +109,20 @@
                 </div>
               </div>
             }
-            @else {
-              <!-- There are no coincidences yet -->
-            }
+            
         }
+      } @else {
+        <ng-container *ngIf="!searchExists(srch, apartmentsService.apartments) ">
+          {{openDialog()}}
+        </ng-container>
+      }
+
       </div>
+
     }
 </div>
 
 <app-footer></app-footer>
+
+<!-- <button mat-button (click)="openDialog()">Launch dialog</button> -->
+
