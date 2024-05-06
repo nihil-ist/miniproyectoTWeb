@@ -10,12 +10,15 @@ import { ApartmentsComponent } from './apartments/apartments.component';
 import { SearchComponent } from './search/search.component';
 import { filter } from 'rxjs';
 import { CarouselComponent } from './carousel/carousel.component';
+import { InfoComponent } from './info/info.component';
+import { FormComponent } from './form/form.component';
+import { TableComponent } from './table/table.component';
 declare const bootstrap: any;
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, NavbarComponent, BannerComponent, FooterComponent, HomeComponent, VideopipeComponent, ApartmentsComponent, SearchComponent, CarouselComponent],
+  imports: [RouterOutlet, NavbarComponent, BannerComponent, FooterComponent, HomeComponent, VideopipeComponent, ApartmentsComponent, SearchComponent, CarouselComponent, InfoComponent, FormComponent, TableComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 
