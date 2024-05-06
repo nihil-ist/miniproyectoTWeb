@@ -3,10 +3,6 @@
       <label for="arrivalDate">Arrival Date</label>
       <input type="date" class="form-control" id="arrivalDate" name="arrivalDate" (change)="saveDate($event)" required>
   </div>
-  <div class="form-group">
-      <label for="arrivalTime">Arrival Time</label>
-      <input type="time" class="form-control" id="arrivalTime" name="arrivalTime" [(ngModel)]="reservation.arrivalTime" required>
-  </div>
     <div class="form-group">
       <label for="departureDate">Departure Date</label>
       <input type="date" class="form-control" id="departureDate" name="departureDate" (change)="saveDepartureDate($event)" required>
