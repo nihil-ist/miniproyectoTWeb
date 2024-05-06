@@ -15,11 +15,12 @@ import {
   MatDialogTitle,
 } from '@angular/material/dialog';
 import { Observable, of } from 'rxjs';
+import { Router, RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-apartments',
   standalone: true,
-  imports: [SearchComponent, NavbarComponent, FooterComponent, CommonModule, MatDialogModule, MatButtonModule, MatDialogTitle, MatDialogContent, MatDialogActions, MatDialogClose],
+  imports: [SearchComponent, NavbarComponent, FooterComponent, CommonModule, MatDialogModule, MatButtonModule, MatDialogTitle, MatDialogContent, MatDialogActions, MatDialogClose, RouterModule],
   templateUrl: './apartments.component.html',
   styleUrl: './apartments.component.css'
 })
@@ -31,7 +32,7 @@ export class ApartmentsComponent {
     this.dialogboolean = true;
 
   }
-  constructor(public apartmentsService:ApartmentsService, public dialog: MatDialog){
+  constructor(public apartmentsService:ApartmentsService, public dialog: MatDialog, private router:Router){
 
   }
 
@@ -71,6 +72,9 @@ export class ApartmentsComponent {
   }
 
 
+  lookForAppartment(id:number){
+    this.router.navigate(['/apartment',id]);
+  }
 }
 
 @Component({

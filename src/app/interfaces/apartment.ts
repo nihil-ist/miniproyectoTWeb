@@ -7,4 +7,5 @@ export interface Apartment{
     address:string;
     src:string;
     price:string;
+    rating:number;
 }

@@ -9,6 +9,7 @@
       <div class="row row-cols-1 row-cols-md-3 g-4  " style="margin: 0 auto;">
         @for (apartment of apartmentsService.apartments; track apartment;let i=$index;) {
           <div class="col col-sm-12 col-md-12 col-xl-6 col-xxl-4 mb-4"  style="margin: 0 auto;">
+            <a [routerLink]="['/apartment', i]" routerLinkActive="router-link-active" >
           <div class="card" style="width: 19rem; margin: 0 auto; border: none; background: none;">
                 <div id="carouselApartments{{i}}" class="carousel slide" data-bs-ride="true">
                   <div class="carousel-indicators">
@@ -45,13 +46,15 @@
                     <span class="visually-hidden">Next</span>
                   </button>
                 </div>
-                <div class="card-body">
-                    <h6 class="card-text">{{apartment.name}}</h6>
-                    <h6 class="text-muted">Hosted by {{apartment.owner}}</h6>
-                    <h6>{{apartment.city}}</h6>
-                    <h6>{{apartment.price}} USD<span class="fw-normal"> night</span></h6>
-                  </div>
+                
+              <div class="card-body">
+                  <h6 class="card-text">{{apartment.name}}</h6>
+                  <h6 class="text-muted">Hosted by {{apartment.owner}}</h6>
+                  <h6>{{apartment.city}}</h6>
+                  <h6>{{apartment.price}} USD<span class="fw-normal"> night</span></h6>
+                </div>
             </div>
+            </a>
           </div>
         }
       </div>
@@ -61,10 +64,9 @@
         @if (searchExists(srch, apartmentsService.apartments)) {
           @for (apartment of apartmentsService.apartments; track apartment;let i = $index;) {
             @if (searchMatches(srch,apartment.owner) || searchMatches(srch,apartment.city)) {
-              <!-- noMatchesFound = false; -->
-              
+
               <div class="col col-sm-12 col-md-6 col-xl-5 col-xxl-4 mb-4"  style="margin: 0 auto;">
-                
+                <a [routerLink]="['/apartment', i]" routerLinkActive="router-link-active" >
                 <div class="card" style="width: 19rem; margin: 0 auto; border: none; background: none;">
                   <div id="carouselApartments{{i}}" class="carousel slide" data-bs-ride="true">
                     <div class="carousel-indicators">
@@ -107,6 +109,7 @@
                       <h6>{{apartment.price}} USD<span class="fw-normal"> night</span></h6>
                     </div>
                 </div>
+                </a>
               </div>
             }
             
