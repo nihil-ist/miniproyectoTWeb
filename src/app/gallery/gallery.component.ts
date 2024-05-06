@@ -1,9 +1,10 @@
-import { Component, TrackByFunction } from '@angular/core';
+import { Component, OnInit, TrackByFunction } from '@angular/core';
 import { NavbarComponent } from '../navbar/navbar.component';
 import { FooterComponent } from '../footer/footer.component';
 import { NgxMasonryModule } from 'ngx-masonry';
 import { CommonModule } from '@angular/common';
 import { NgxMasonryOptions } from 'ngx-masonry';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-gallery',
@@ -12,7 +13,7 @@ import { NgxMasonryOptions } from 'ngx-masonry';
   templateUrl: './gallery.component.html',
   styleUrl: './gallery.component.css'
 })
-export class GalleryComponent {
+export class GalleryComponent  {
   arrayN: number[] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26];
   masonryItems = [
     { src: '../../assets/img/gallery/1.png' },
@@ -42,4 +43,5 @@ export class GalleryComponent {
     { src: '../../assets/img/gallery/25.png' },
     { src: '../../assets/img/gallery/26.png' }
   ];
+
 }

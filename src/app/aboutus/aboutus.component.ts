@@ -1,7 +1,7 @@
-import { AfterViewChecked, Component } from '@angular/core';
+import { AfterViewChecked, Component, OnInit } from '@angular/core';
 import { NavbarComponent } from '../navbar/navbar.component';
 import { FooterComponent } from '../footer/footer.component';
-declare const bootstrap: any;
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-aboutus',
@@ -10,18 +10,6 @@ declare const bootstrap: any;
   templateUrl: './aboutus.component.html',
   styleUrl: './aboutus.component.css'
 })
-export class AboutusComponent{
-  // ngAfterViewChecked(): void {
-  //   // Obtiene el elemento del carrusel
-  //   const carouselElement = document.querySelector('#carouselTitle') as HTMLElement;
+export class AboutusComponent {
 
-  //   // Crea una instancia del carrusel
-  //   const carousel = new bootstrap.Carousel(carouselElement, {
-  //       interval: 2000, // Cambia las diapositivas cada 2 segundos (ajusta según tus necesidades)
-  //   });
-  // }
-
-  onRouteChange(): void {
-
-  }
 }

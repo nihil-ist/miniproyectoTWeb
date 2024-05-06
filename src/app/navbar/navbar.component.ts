@@ -1,11 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input'; 
-import { NavigationEnd, Router, RouterModule } from '@angular/router';
+import { ActivatedRoute, NavigationEnd, NavigationError, NavigationStart, Router, RouterModule } from '@angular/router';
 import { SearchComponent } from '../search/search.component';
 import { ApartmentsService } from '../apartmentsService/apartments.service';
-declare const bootstrap: any;
+import { filter } from 'rxjs';
 
 @Component({
   selector: 'app-navbar',
@@ -14,29 +14,12 @@ declare const bootstrap: any;
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.css'
 })
-export class NavbarComponent {
-
-
-
-  constructor(private router: Router, public apartmentsService:ApartmentsService) {
-    this.router.events.subscribe((event) => {
-          if (event instanceof NavigationEnd) {
-            const carouselElement = document.querySelector('.carouselTitle') as HTMLElement;
-    
-            // Crea una instancia del carrusel
-            const carousel = new bootstrap.Carousel(carouselElement, {
-                interval: 2000, // Cambia las diapositivas cada 2 segundos (ajusta según tus necesidades)
-            });
-          }
-      });
-   }
+export class NavbarComponent  {
 
   srch:string="";
   spreadProccess(search:string){
     this.srch=search;
   }
-
-  
 
   searchMatches(search:string,word:string):boolean{
     search = search.toLowerCase();
@@ -46,4 +29,5 @@ export class NavbarComponent {
       return true;
     return false;
   }
+
 }
