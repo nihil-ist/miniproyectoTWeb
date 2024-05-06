@@ -20,7 +20,7 @@ export class FormComponent {
     name: '',
     phone: '',
     email: '',
-    price: 0,
+    price: null,
     address: '',
     nights: 0
   };
@@ -80,7 +80,7 @@ export class FormComponent {
       name: '',
       phone: '',
       email: '',
-      price: 0,
+      price: null,
       address: '',
       nights: 0
     };
@@ -140,7 +140,7 @@ interface Reservation {
   name: string;
   phone: string;
   email: string;
-  price: number;
+  price: number | null;
   address: string;
   nights: number;
 }
