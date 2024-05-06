@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { SearchComponent } from '../search/search.component';
 import { ApartmentsService } from '../apartmentsService/apartments.service';
 import { NavbarComponent } from '../navbar/navbar.component';
@@ -17,6 +17,8 @@ import {
 import { Observable, of } from 'rxjs';
 import { Router, RouterModule } from '@angular/router';
 
+declare const bootstrap: any;
+
 @Component({
   selector: 'app-apartments',
   standalone: true,
@@ -25,6 +27,16 @@ import { Router, RouterModule } from '@angular/router';
   styleUrl: './apartments.component.css'
 })
 export class ApartmentsComponent {
+
+  ngAfterViewInit() {
+    // const carouselElement = document.querySelector('#carouselTitle') as HTMLElement;
+
+    // // Crea una instancia del carrusel
+    // const carousel = new bootstrap.Carousel(carouselElement, {
+    //     interval: 2000, // Cambia las diapositivas cada 2 segundos (ajusta según tus necesidades)
+    // });
+  }
+  
   srch:string="";
   dialogboolean: boolean = true;
   spreadProccess(search:string){
@@ -35,6 +47,7 @@ export class ApartmentsComponent {
   constructor(public apartmentsService:ApartmentsService, public dialog: MatDialog, private router:Router){
 
   }
+
 
   imgCarousel = {
     'width': '100%',

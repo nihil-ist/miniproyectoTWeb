@@ -1,6 +1,27 @@
-<div class="container py-5">
+<app-navbar></app-navbar>
+
+<div class="paddingx py-5">
+    <h1 class="mb-5 fw-bold">{{apartment.name}}</h1>
     <!-- Apartment images -->
-    <div class="row mb-5">
+    <div>
+        <mat-grid-list cols="4" [gutterSize]="'1%'">
+            @for (tile of tiles; track tile) {
+              <mat-grid-tile
+                [colspan]="tile.cols"
+                [rowspan]="tile.rows"
+                [style.background-image]="'url('+apartment.src+tile.src+')'"
+                [style.background-size]="'cover'"
+                [style.margin]="'0px'"
+                [ngStyle]="{'border-radius': tile.src == '/1.jpg' ? '1vw 0 0 1vw' : tile.src == '/3.jpg' ? '0 1vw 0 0' : tile.src == '/5.jpg' ? '0 0 1vw 0' : ''}"
+                >
+
+              </mat-grid-tile>
+            }
+        </mat-grid-list>
+    </div>
+    
+
+    <!-- <div class="row mb-5">
         <div class="col-md-4 mb-4">
             <img [src]="apartment.src + '/1.jpg'" class="img-fluid rounded border border-dark shadow" alt="Apartment Image 1">
         </div>
@@ -16,37 +37,48 @@
         <div class="col-md-4 mb-4">
             <img [src]="apartment.src + '/5.jpg'" class="img-fluid rounded border border-dark shadow" alt="Apartment Image 5">
         </div>
-    </div>
+    </div> -->
+
     <!-- Apartment details -->
     <div>
         <div class="row">
             <div class="col-8">
-                <h2 class="mb-4">{{apartment.name}}</h2>
-                <hr>
-                <p class="lead mb-4">{{apartment.description}}</p>
+                <div class="d-flex align-items-center justify-content-between">
+                    <div>
+                        <h2 class="mt-5 mb-3">{{apartment.city}}</h2>
+                        <h4 class="mb-5">Hosted by {{apartment.owner}}</h4>
+                    </div>
+                    <div>
+                        <h1 class="mb-1 text-center">{{apartment.rating}} / 5</h1>
+                        <h4 class="text-center">Rating</h4>
+                    </div>
+                </div>
+                
+                <hr class="mb-5">
+                <p class="lead mb-5">{{apartment.description}}</p>
+                
+                <hr class="mb-5">
+
                 <div class="row">
-                    <div class="col-md-6">
-                        <p class="mb-1"><strong>Host:</strong> {{apartment.owner}}</p>
+                    <div class="col">
+                        <p class="lead fs-4"><strong>Located in:</strong> {{apartment.address}}</p>
                     </div>
                 </div>
             </div>
-            <div class="col-3" style="align-content: center;">
+            <!-- <div class="col-3" style="align-content: center;">
                 <div class="row">
-                    <div class="col-md-6">
-                        <p class="mb-1 text-center fs-1">{{apartment.rating}}/5</p>
-                    </div>
+                    
                 </div>
                 <div class="row">
                     <div class="col-md-6">
                         <p class="mb-1 text-center"><strong>Rating</strong></p>
                     </div>
                 </div>
-            </div>
+            </div> -->
         </div>
-        <div class="row">
-            <div class="col">
-                <p class="fs-6"><strong>Located in:</strong> {{apartment.address}}</p>
-            </div>
-        </div>
+
+        
     </div>
 </div>
+
+<app-footer></app-footer>
