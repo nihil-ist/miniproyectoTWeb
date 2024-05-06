@@ -22,7 +22,6 @@ export class FormComponent {
     email: '',
     price: 0,
     address: '',
-    days: 0,
     nights: 0
   };
 
@@ -66,8 +65,25 @@ export class FormComponent {
 
   submitForm(){
     // console.log(this.from.value);
+    //this.reservations.push(this.reservation);
+    //localStorage.setItem('reservations', JSON.stringify(this.reservations));
+  
     this.reservations.push(this.reservation);
+    this.splitReservations(); // Update filtered reservations immediately
     localStorage.setItem('reservations', JSON.stringify(this.reservations));
+
+    // Reset form after successful submission (optional)
+    this.reservation = {
+      arrivalDate: null,
+      departureDate: null,
+      arrivalTime: '',
+      name: '',
+      phone: '',
+      email: '',
+      price: 0,
+      address: '',
+      nights: 0
+    };
   }
 
   saveDate(event: any) {
@@ -126,6 +142,5 @@ interface Reservation {
   email: string;
   price: number;
   address: string;
-  days: number;
   nights: number;
 }
