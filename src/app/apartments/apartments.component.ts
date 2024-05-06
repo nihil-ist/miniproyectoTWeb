@@ -4,6 +4,7 @@ import { ApartmentsService } from '../apartmentsService/apartments.service';
 import { NavbarComponent } from '../navbar/navbar.component';
 import { FooterComponent } from '../footer/footer.component';
 import {Router,RouterModule} from '@angular/router';
+import { Apartment } from '../interfaces/apartment';
 
 @Component({
   selector: 'app-apartments',

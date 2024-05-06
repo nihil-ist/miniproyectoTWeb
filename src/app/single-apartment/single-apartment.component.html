@@ -1,20 +1,52 @@
-<div>
-    <div class="">
-        <div class="row">
-            <div class="col-4"><img [src]="apartment.src + '/1.jpg'" class="d-block w-100" alt="..." style="border-radius: 5%;"></div>
-            <div class="col-5"><img [src]="apartment.src + '/2.jpg'" class="d-block w-100" alt="..." style="border-radius: 5%;"></div>
+<div class="container py-5">
+    <!-- Apartment images -->
+    <div class="row mb-5">
+        <div class="col-md-4 mb-4">
+            <img [src]="apartment.src + '/1.jpg'" class="img-fluid rounded border border-dark shadow" alt="Apartment Image 1">
         </div>
-        <div class="row">
-            <div class="col-3"><img [src]="apartment.src + '/3.jpg'" class="d-block w-100" alt="..." style="border-radius: 5%;"></div>
-            <div class="col-3"><img [src]="apartment.src + '/4.jpg'" class="d-block w-100" alt="..." style="border-radius: 5%;"></div>
-            <div class="col-3"><img [src]="apartment.src + '/5.jpg'" class="d-block w-100" alt="..." style="border-radius: 5%;"></div>
+        <div class="col-md-4 mb-4">
+            <img [src]="apartment.src + '/2.jpg'" class="img-fluid rounded border border-dark shadow" alt="Apartment Image 2">
+        </div>
+        <div class="col-md-4 mb-4">
+            <img [src]="apartment.src + '/3.jpg'" class="img-fluid rounded border border-dark shadow" alt="Apartment Image 3">
+        </div>
+        <div class="col-md-4 mb-4">
+            <img [src]="apartment.src + '/4.jpg'" class="img-fluid rounded border border-dark shadow" alt="Apartment Image 4">
+        </div>
+        <div class="col-md-4 mb-4">
+            <img [src]="apartment.src + '/5.jpg'" class="img-fluid rounded border border-dark shadow" alt="Apartment Image 5">
         </div>
     </div>
+    <!-- Apartment details -->
     <div>
-        <h2>{{apartment.name}}</h2>
-        <hr>
-        <p>{{apartment.description}}</p>
-        <p>{{apartment.owner}} will receive you if you did a reservation earlier</p>
+        <div class="row">
+            <div class="col-8">
+                <h2 class="mb-4">{{apartment.name}}</h2>
+                <hr>
+                <p class="lead mb-4">{{apartment.description}}</p>
+                <div class="row">
+                    <div class="col-md-6">
+                        <p class="mb-1"><strong>Host:</strong> {{apartment.owner}}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3" style="align-content: center;">
+                <div class="row">
+                    <div class="col-md-6">
+                        <p class="mb-1 text-center fs-1">{{apartment.rating}}/5</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <p class="mb-1 text-center"><strong>Rating</strong></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <p class="fs-6"><strong>Located in:</strong> {{apartment.address}}</p>
+            </div>
+        </div>
     </div>
-
 </div>

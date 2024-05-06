@@ -7,7 +7,7 @@
       <div class="row row-cols-1 row-cols-md-3 g-4  " style="margin: 0 auto;">
         @for (apartment of apartmentsService.apartments; track apartment;let i=$index;) {
           <div class="col col-sm-12 col-md-12 col-xl-6 col-xxl-4 mb-4"  style="margin: 0 auto;">
-          <a [routerLink]="['/apartment',i]" routerLinkActive="router-link-active" >
+          <a [routerLink]="['/apartment', i]" routerLinkActive="router-link-active" >
             <div class="card" style="width: 19rem; margin: 0 auto; border: none; background: none;">
               <div id="carouselApartments{{i}}" class="carousel slide" data-bs-ride="true">
                 <div class="carousel-indicators">
