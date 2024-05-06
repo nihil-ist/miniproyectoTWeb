@@ -1,21 +1,15 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { NavbarComponent } from './navbar/navbar.component';
-import {MatToolbarModule} from '@angular/material/toolbar'; 
-import { BannerComponent } from './banner/banner.component';
-import { FooterComponent } from './footer/footer.component';
-import { HomeComponent } from './home/home.component';
-import { VideopipeComponent } from './videopipe/videopipe.component';
-import { ApartmentsComponent } from './apartments/apartments.component';
-import { SearchComponent } from './search/search.component';
+import { FormComponent } from './form/form.component';
+import { InfoComponent } from './info/info.component';
+import { TableComponent } from "./table/table.component";
 
 @Component({
-  selector: 'app-root',
-  standalone: true,
-  imports: [RouterOutlet, NavbarComponent, BannerComponent, FooterComponent, HomeComponent, VideopipeComponent, ApartmentsComponent, SearchComponent],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
-
+    selector: 'app-root',
+    standalone: true,
+    templateUrl: './app.component.html',
+    styleUrl: './app.component.css',
+    imports: [RouterOutlet, FormComponent, InfoComponent, TableComponent]
 })
 export class AppComponent {
   title = 'miniproyectoTWeb';
