@@ -6,6 +6,7 @@ import {MatGridListModule} from '@angular/material/grid-list';
 import { NavbarComponent } from '../navbar/navbar.component';
 import { FooterComponent } from '../footer/footer.component';
 import { CommonModule } from '@angular/common';
+import { InfoComponent } from '../info/info.component';
 
 export interface Tile {
   src: string;
@@ -18,7 +19,7 @@ export interface Tile {
 @Component({
   selector: 'app-single-apartment',
   standalone: true,
-  imports: [MatGridListModule, NavbarComponent, FooterComponent, CommonModule],
+  imports: [MatGridListModule, NavbarComponent, FooterComponent, CommonModule, InfoComponent],
   templateUrl: './single-apartment.component.html',
   styleUrl: './single-apartment.component.css'
 })

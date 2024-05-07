@@ -1,7 +1,17 @@
-<!-- <app-navbar></app-navbar> -->
-<app-carousel></app-carousel>
-<div class="">
-    <router-outlet class="content"></router-outlet>
-</div>
+<div class="main-container">
 
-<!-- <app-footer></app-footer> -->
+    <header>
+        <app-carousel></app-carousel>
+    </header>
+    
+    <main>
+        <div class="">
+            <router-outlet class="content"></router-outlet>
+        </div>
+    </main>
+    
+    <footer>
+        <app-footer></app-footer>
+    </footer>
+    
+</div>

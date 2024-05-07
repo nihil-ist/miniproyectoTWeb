@@ -3,11 +3,13 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { from } from 'rxjs';
 import { FormComponent } from '../form/form.component';
+import { NavbarComponent } from '../navbar/navbar.component';
+import { FooterComponent } from '../footer/footer.component';
 
 @Component({
   selector: 'app-table',
   standalone: true,
-  imports: [FormComponent,FormsModule, CommonModule],
+  imports: [FormComponent,FormsModule, CommonModule, NavbarComponent, FooterComponent],
   templateUrl: './table.component.html',
   styleUrl: './table.component.css'
 })
@@ -34,11 +36,21 @@ export class TableComponent {
 
   imageUrl: string = 'assets/img/house.jpeg';
 
+  reservationsExist(): boolean {
+    const storedReservations = localStorage.getItem('reservations');
+    if (storedReservations) 
+      return true;
+    return false;
+  }
+
   ngOnInit(){
     const storedReservations = localStorage.getItem('reservations');
     if (storedReservations) {
+      console.log("hay reservaciones")
       this.reservations = JSON.parse(storedReservations);
       this.splitReservations();
+    } else {
+      console.log("no hay reservaciones")
     }
     // this.arrivalDate = localStorage.getItem('selectedDate');
     // this.departureDate = localStorage.getItem('departureDate');
