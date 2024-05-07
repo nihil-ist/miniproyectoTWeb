@@ -18,10 +18,7 @@ export interface Tile {
 })
 export class BannerComponent {
   tiles: Tile[] = [
-    {text: 'live in your dream house, at least for a day', cols: 4, rows: 8, color: 'url(../../assets/img/nyc.gif)'},
+    {text: 'live in your dream house, at least for a day', cols: 4, rows: 8, color: 'url(assets/img/nyc.gif)'},
     
-    // {text: 'Two', cols: 1, rows: 8, color: 'lightgreen'},
-    // {text: 'Three', cols: 1, rows: 4, color: 'lightpink'},
-    // {text: 'Four', cols: 2, rows: 4, color: 'url(../../assets/img/logo2.png)'},
   ];
 }

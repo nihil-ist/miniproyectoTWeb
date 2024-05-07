@@ -42,17 +42,7 @@ export class FormComponent {
     {text: 'Five', cols: 1, rows: 1, src: '/5.jpg'}
   ];
 
-  reservation: Reservation = {
-    arrivalDate: null,
-    departureDate: null,
-    arrivalTime: '13:00',
-    name: '',
-    phone: '',
-    email: '',
-    price: null,
-    address: '',
-    nights: 0
-  };
+
 
   reservations: Reservation[] = [];
 
@@ -62,6 +52,18 @@ export class FormComponent {
   imageUrl: string = 'assets/img/house.jpeg';
 
   @Input() apartment!:Apartment;
+
+  reservation: Reservation = {
+    arrivalDate: null,
+    departureDate: null,
+    arrivalTime: '13:00',
+    name: '',
+    phone: '',
+    email: '',
+    price: '',
+    address: '',
+    nights: 0
+  };
   dialog: any;
   ngOnInit(){
     const storedReservations = localStorage.getItem('reservations');
@@ -92,10 +94,8 @@ export class FormComponent {
   }
 
   submitForm(){
-    // console.log(this.from.value);
-    //this.reservations.push(this.reservation);
-    //localStorage.setItem('reservations', JSON.stringify(this.reservations));
-    // this.showAlertgood();
+    this.reservation.address = this.apartment.address;
+    this.reservation.price = this.apartment.price;
     this.reservations.push(this.reservation);
     this.splitReservations(); // Update filtered reservations immediately
     localStorage.setItem('reservations', JSON.stringify(this.reservations));
@@ -108,7 +108,7 @@ export class FormComponent {
       name: '',
       phone: '',
       email: '',
-      price: null,
+      price: '',
       address: '',
       nights: 0
     };
@@ -199,7 +199,7 @@ interface Reservation {
   name: string;
   phone: string;
   email: string;
-  price: number | null;
+  price: string;
   address: string;
   nights: number;
 }
