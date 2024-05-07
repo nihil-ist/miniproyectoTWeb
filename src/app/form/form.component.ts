@@ -1,7 +1,8 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { from } from 'rxjs';
+import { Input } from '@angular/core';
+import { Apartment } from '../interfaces/apartment';
 
 @Component({
   selector: 'app-form',
@@ -30,11 +31,9 @@ export class FormComponent {
   pastReservations: Reservation[] = [];
   futureReservations: Reservation[] = [];
 
-  // arrivalDate:string | null = null;
-  // departureDate:string | null = null;
-
   imageUrl: string = 'assets/img/house.jpeg';
 
+  @Input() apartment!:Apartment;
   ngOnInit(){
     const storedReservations = localStorage.getItem('reservations');
     if (storedReservations) {
