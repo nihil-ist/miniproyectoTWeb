@@ -10,7 +10,9 @@ export const APARTMENTS: Apartment[] = [
         address: "94 Prince St, New York, NY 10012, United States",
         src: "../assets/img/apartments/1",
         price: "$80",
-        rating: 4.2
+        rating: 4.2,
+        longitud: 40.72463418034214,
+        latitud:-73.99882430360019
     },
     {
         id: 2,
@@ -21,7 +23,9 @@ export const APARTMENTS: Apartment[] = [
         address: "1000 St Johns Pl 2514, Brooklyn, NY 11213, United States",
         src: "../assets/img/apartments/2",
         price: "$68",
-        rating: 4.8
+        rating: 4.8,
+        longitud: 40.67133330731358,
+        latitud:-73.9451984342862
     },
     {
         id: 3,
@@ -32,7 +36,9 @@ export const APARTMENTS: Apartment[] = [
         address: "Magnusstrasse 21, 8004 Zürich, Switzerland",
         src: "../assets/img/apartments/3",
         price: "$102",
-        rating: 4.5
+        rating: 4.5,
+        longitud: 47.38014591401019,
+        latitud: 8.524896281425212
     },
     {
         id: 4,
@@ -43,7 +49,9 @@ export const APARTMENTS: Apartment[] = [
         address: "Chem. Surinam 5, 1203 Genève, Switzerland",
         src: "../assets/img/apartments/4",
         price: "$110",
-        rating: 4.3
+        rating: 4.3,
+        longitud: 46.20920941623444,
+        latitud:6.127513296699077
     },
     {
         id: 5,
@@ -54,7 +62,9 @@ export const APARTMENTS: Apartment[] = [
         address: "25-27 Pl. de la Madeleine, 75008 Paris, France",
         src: "../assets/img/apartments/5",
         price: "$79",
-        rating: 4.7
+        rating: 4.7,
+        longitud: 48.87121644213378,
+        latitud:2.3245133968548797
     },
     {
         id: 6,
@@ -65,7 +75,9 @@ export const APARTMENTS: Apartment[] = [
         address: "C. Pachuca 146-a, Colonia Condesa, Cuauhtémoc, 06140 Ciudad de México, CDMX",
         src: "../assets/img/apartments/6",
         price: "$52",
-        rating: 4.1
+        rating: 4.1,
+        longitud: 19.412978980504686,
+        latitud: -99.17892395813908
     },
     {
         id: 7,
@@ -76,7 +88,9 @@ export const APARTMENTS: Apartment[] = [
         address: "420 Blanchard St, Seattle, WA 98121, United States",
         src: "../assets/img/apartments/7",
         price: "$80",
-        rating: 4.4
+        rating: 4.4,
+        longitud: 47.615285353935995,
+        latitud:-122.34228101856104
     },
     {
         id: 8,
@@ -87,7 +101,9 @@ export const APARTMENTS: Apartment[] = [
         address: "6-chōme-3-3 Higashinippori, Arakawa City, Tokyo 116-0014, Japan",
         src: "../assets/img/apartments/8",
         price: "$75",
-        rating: 4.9
+        rating: 4.9,
+        longitud: 35.73228119201864,
+        latitud:139.7785652384839
     },
     {
         id: 9,
@@ -98,7 +114,9 @@ export const APARTMENTS: Apartment[] = [
         address: "36 Sejong-daero 11-gil, Jung-gu, Seoul, South Korea",
         src: "../assets/img/apartments/9",
         price: "$90",
-        rating: 4.6
+        rating: 4.6,
+        longitud: 37.562371632478175,
+        latitud: 126.97387339624146
     },
     {
         id: 10,
@@ -109,7 +127,9 @@ export const APARTMENTS: Apartment[] = [
         address: "Wöhlerstraße 24, 50823 Köln, Germany",
         src: "../assets/img/apartments/10",
         price: "$84",
-        rating: 4.2
+        rating: 4.2,
+        longitud: 50.9565359955173,
+        latitud: 6.932130125816848
     },
     {
         id: 11,
@@ -120,7 +140,9 @@ export const APARTMENTS: Apartment[] = [
         address: "Carrer del País Valencià, 13, 07800 Eivissa, Illes Balears, Spain",
         src: "../assets/img/apartments/11",
         price: "$125",
-        rating: 4.8
+        rating: 4.8,
+        longitud: 38.90841270163723,
+        latitud:1.4222807098013042
     },
     {
         id: 12,
@@ -131,6 +153,8 @@ export const APARTMENTS: Apartment[] = [
         address: "Sestiere Dorsoduro, 3494/ A, 30123 Venezia VE, Italy",
         src: "../assets/img/apartments/12",
         price: "$140",
-        rating: 4.4
+        rating: 4.4,
+        longitud: 45.43620676886931,
+        latitud:12.3206321966551
     }
 ];

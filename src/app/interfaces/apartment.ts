@@ -8,4 +8,6 @@ export interface Apartment{
     src:string;
     price:string;
     rating:number;
+    latitud:number;
+    longitud:number;
 }

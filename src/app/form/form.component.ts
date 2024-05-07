@@ -3,16 +3,44 @@ import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Input } from '@angular/core';
 import { Apartment } from '../interfaces/apartment';
+import {MatDialogActions, MatDialogClose, MatDialogContent, MatDialogModule, MatDialogTitle} from '@angular/material/dialog'; 
+import {MatButtonModule} from '@angular/material/button'; 
+import {MatDatepickerModule} from '@angular/material/datepicker'; 
+import {MatInputModule} from '@angular/material/input';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatGridListModule} from '@angular/material/grid-list'; 
+import {MatCard, MatCardModule} from '@angular/material/card'; 
+import {MatDialog} from '@angular/material/dialog';
+import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
+import Swal from 'sweetalert2';
+
+export interface Tile {
+  src: string;
+  cols: number;
+  rows: number;
+  text: string;
+}
 
 @Component({
   selector: 'app-form',
   standalone: true,
-  imports: [FormsModule, CommonModule],
+  imports: [FormsModule, CommonModule, MatFormFieldModule, MatDialogModule, MatButtonModule, MatDatepickerModule, MatInputModule, MatGridListModule, SweetAlert2Module],
   templateUrl: './form.component.html',
   styleUrl: './form.component.css'
 })
 
 export class FormComponent {
+
+  dialog1boolean: boolean = true;
+
+  
+  tiles: Tile[] = [
+    {text: 'One', cols: 2, rows: 2, src: '/1.jpg'},
+    {text: 'Two', cols: 1, rows: 1, src: '/2.jpg'},
+    {text: 'Three', cols: 1, rows: 1, src: '/3.jpg'},
+    {text: 'Four', cols: 1, rows: 1, src: '/4.jpg'},
+    {text: 'Five', cols: 1, rows: 1, src: '/5.jpg'}
+  ];
 
   reservation: Reservation = {
     arrivalDate: null,
@@ -34,6 +62,7 @@ export class FormComponent {
   imageUrl: string = 'assets/img/house.jpeg';
 
   @Input() apartment!:Apartment;
+  dialog: any;
   ngOnInit(){
     const storedReservations = localStorage.getItem('reservations');
     if (storedReservations) {
@@ -66,7 +95,7 @@ export class FormComponent {
     // console.log(this.from.value);
     //this.reservations.push(this.reservation);
     //localStorage.setItem('reservations', JSON.stringify(this.reservations));
-  
+    // this.showAlertgood();
     this.reservations.push(this.reservation);
     this.splitReservations(); // Update filtered reservations immediately
     localStorage.setItem('reservations', JSON.stringify(this.reservations));
@@ -89,24 +118,51 @@ export class FormComponent {
     const selectedDate = new Date(event.target.value);
     const currentDate = new Date();
     if (selectedDate < currentDate) {
-      alert("That date has passed already.");
+      this.showAlertpassed();
       event.target.value = '';
     } else {
       const isDateAvailable = this.isDateAvailable(selectedDate);
       if (!isDateAvailable) {
-        alert("This range of date is already reserved, choose another dates.");
+        this.showAlertalready();
         event.target.value = '';
       } else {
         this.reservation.arrivalDate = selectedDate;
       }
     }
   }
-
+  showAlertgood() {
+    Swal.fire({
+      title: "Great!",
+      text: 'Your reservation has been successfully completed.',
+      icon: 'success' // You can use other icons like 'info', 'warning', 'error'
+    });
+  } 
+  showAlertpassed() {
+    Swal.fire({
+      title: "We're sorry :(",
+      text: 'That date has passed already.',
+      icon: 'error' // You can use other icons like 'info', 'warning', 'error'
+    });
+  } 
+   showAlertbefore() {
+    Swal.fire({
+      title: "We're sorry :(",
+      text: 'The departure date must be after the arrival date.',
+      icon: 'error' // You can use other icons like 'info', 'warning', 'error'
+    });
+  }
+  showAlertalready() {
+    Swal.fire({
+      title: "We're sorry :(",
+      text: 'This range of date is already reserved, choose another dates.',
+      icon: 'error' // You can use other icons like 'info', 'warning', 'error'
+    });
+  }
   saveDepartureDate(event: any) {
     const departureDate = new Date(event.target.value);
     const arrivalDate = this.reservation.arrivalDate;
     if (arrivalDate && departureDate <= arrivalDate) {
-      alert("Departure date must be after arrival date");
+      this.showAlertbefore();
       event.target.value = '';
     } else {
       this.reservation.departureDate = departureDate;
@@ -126,11 +182,15 @@ export class FormComponent {
       ) {
         return false;
       }
-    }
+    }       
+    //  this.showAlertgood();
+
     return true;
   }
   
+
 }
+
 
 interface Reservation {
   arrivalDate: Date | null;
